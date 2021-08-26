@@ -1,0 +1,14 @@
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+{{- $mainScriptPath := "js/index.js" }}
+{{- $main := resources.Get $mainScriptPath | resources.ExecuteAsTemplate $mainScriptPath . }}
+
+{{- $bundle := slice $main }}
+{{- if site.Params.Staticman }}
+  {{- $bundle = slice $main }}
+{{- end }}
+{{- $bundle =  $bundle | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" -}}
+
+<script type="text/javascript" src="{{ $bundle.Permalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous"></script>
