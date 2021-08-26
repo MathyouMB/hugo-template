@@ -3,13 +3,15 @@
 	"file": "styles.css",
 	"sourceRoot": "/home/runner/work/hugo-template/hugo-template",
 	"sources": [
-		"assets/sass/main.sass",
-		"assets/sass/_variables.sass"
+		"assets/scss/main.scss",
+		"assets/scss/_variables.scss",
+		"assets/scss/_global.scss"
 	],
 	"sourcesContent": [
-		"@import 'variables';\n",
-		"html {\n    --title-font: 'Zen Dots', cursive;\n    --font: font-family: 'Roboto', sans-serif;\n    --breakpoint: 850px;\n    scroll-behavior: smooth; }\n\nbody {\n    padding: 0;\n    margin: 0;\n    min-height: 100vh; }\n\n$breakpoint: 850px;\n\n@mixin hover {\n  transition: all 0.5s;\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-transform: perspective(1px) translateZ(0);\n  transform: perspective(1px) translateZ(0);\n  -webkit-transition-duration: 0.3s;\n  transition-duration: 0.3s;\n  -webkit-transition-property: transform;\n  transition-property: transform;\n  -webkit-transition-timing-function: ease-out;\n  transition-timing-function: ease-out;\n  &:hover {\n    -webkit-transform: translateY(-8px);\n    transform: translateY(-8px);\n    transition: all 0.5s; } }\n"
+		"@import \"variables\";\n@import \"global\";\n",
+		"",
+		"body {\n  margin: 0;\n  padding: 0;\n  background-color: #faf9f8;\n  font-family: \"Source Sans Pro\", sans-serif;\n  overflow-x: hidden;\n}\n"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,IAAI,AAAC,CACD,YAAY,CAAA,oBAAC,CACb,MAAM,CAAA,kCAAC,CACP,YAAY,CAAA,MAAC,CACb,eAAe,CAAE,MAAM,CAAG,AAE9B,AAAA,IAAI,AAAC,CACD,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,KAAK,CAAG"
+	"mappings": "AEAA,AAAA,IAAI,AAAC,CACH,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,gBAAgB,CAAE,OAAO,CACzB,WAAW,CAAE,6BAA6B,CAC1C,UAAU,CAAE,MAAM,CACnB"
 }
